@@ -3,11 +3,7 @@ var generateBtn = document.querySelector("#generate");
 var numeric_set = ["0", "1", "2", "3", "4", "5", "6", "7", "8", "9"];
 var lowercase_set = ["a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", "n", "o", "p", "q", "r", "s", "t", "u", "v", "w", "x", "y", "z"];
 var uppercase_set = ["A", "B", "C", "D", "E", "F", "G", "H", "I", "J", "K", "L", "M", "N", "O", "P", "Q", "R", "S", "T", "U", "V", "W", "X", "Y", "Z"];
-var special_set = [" ", "!"] // , "\"", "#", "$", "%", "&", "'", "(", ")", "*", "+", ",", "-", ".", "/", ":", ";", "<", "=", ">", "?", "@", "[", "\", ']', '\^', '_', "`", "{", "|", "}", "~"];
-
-var selected_subset = []; // predefining the set that will have 1-4 sets later
-
-// var password_to_be_returned = '';
+var special_set = [" ", "!", "\"", "#", "$", "%", "&", "'", "(", ")", "*", "+", ",", "-", ".", "/", ":", ";", "<", "=", ">", "?", "@", "[", "\\", "]", "^", "_", "`", "{", "|", "}", "~"]; // added escape characters, a \,  for " and \
 
 
 // give credit to https://stackoverflow.com/questions/7820683/convert-boolean-result-into-number-integer
@@ -16,7 +12,6 @@ var bool_no = false;
 var bool_yes = true;
 console.log(+bool_no)
 console.log(+true + +bool_yes) // hooray this is what we needed
-
 
 
 // var usable_set_1 = [];
@@ -31,6 +26,9 @@ function writePassword() {
 window.alert("You clicked me!"); // update later
 
   var password_to_be_returned = ''; // had to move inside function so that a new empty password string is initialized every time
+  var selected_subset = []; // predefining the set that will have 1-4 sets later
+  // similarly had to move inside function so that it would be reset to empty every time button is clicked
+
 
   var user_desired_length = window.prompt("How long do you want your password to be? It needs to be at least 8 long and no more than 128 long.");
 
@@ -68,7 +66,7 @@ window.alert("You clicked me!"); // update later
     if (numeric_include) {selected_subset = selected_subset.concat(numeric_set);}
     if (uppercase_include) {selected_subset = selected_subset.concat(uppercase_set);}
     if (lowercase_include) {selected_subset = selected_subset.concat(lowercase_set);}
-    // if (special_include) {selected_subset = selected_subset.concat(special_set);} // will add later on once you get special chars working
+    if (special_include) {selected_subset = selected_subset.concat(special_set);} // will add later on once you get special chars working
 
     // gotta add the one minimum per selected set hard code
     // lowercase character inclusion hardcode
@@ -111,22 +109,6 @@ window.alert("You clicked me!"); // update later
     window.alert("None were selected :((( Try again ");
     return; // breaks out of pw generator
   }
-
-  
-
-  
-// var usable_set = [];
-
-// add concat code
-
-// add for loop with rand number generator
-
-// add password output
-
-
-
-
-
 
 
   var password = generatePassword();
