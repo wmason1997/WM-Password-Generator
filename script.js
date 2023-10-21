@@ -3,11 +3,21 @@ var generateBtn = document.querySelector("#generate");
 var numeric_set = ["0", "1", "2", "3", "4", "5", "6", "7", "8", "9"];
 var lowercase_set = ["a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", "n", "o", "p", "q", "r", "s", "t", "u", "v", "w", "x", "y", "z"];
 var uppercase_set = ["A", "B", "C", "D", "E", "F", "G", "H", "I", "J", "K", "L", "M", "N", "O", "P", "Q", "R", "S", "T", "U", "V", "W", "X", "Y", "Z"];
-// var special_set = [" ", "!", "\"", "#", "$", "%", "&", "'", "(", ")", "*", "+", ",", "-", ".", "/", ":", ";", "<", "=", ">", "?", "@", "[", "\", ']', '\^', '_', "`", "{", "|", "}", "~"];
+var special_set = [" ", "!"] // , "\"", "#", "$", "%", "&", "'", "(", ")", "*", "+", ",", "-", ".", "/", ":", ";", "<", "=", ">", "?", "@", "[", "\", ']', '\^', '_', "`", "{", "|", "}", "~"];
 
 var selected_subset = []; // predefining the set that will have 1-4 sets later
 
-var password_to_be_returned = '';
+// var password_to_be_returned = '';
+
+
+// give credit to https://stackoverflow.com/questions/7820683/convert-boolean-result-into-number-integer
+console.log(+ true);
+var bool_no = false;
+var bool_yes = true;
+console.log(+bool_no)
+console.log(+true + +bool_yes) // hooray this is what we needed
+
+
 
 // var usable_set_1 = [];
 
@@ -19,6 +29,8 @@ function generatePassword() {
 // Write password to the #password input
 function writePassword() {
 window.alert("You clicked me!"); // update later
+
+  var password_to_be_returned = ''; // had to move inside function so that a new empty password string is initialized every time
 
   var user_desired_length = window.prompt("How long do you want your password to be? It needs to be at least 8 long and no more than 128 long.");
 
@@ -59,9 +71,31 @@ window.alert("You clicked me!"); // update later
     // if (special_include) {selected_subset = selected_subset.concat(special_set);} // will add later on once you get special chars working
 
     // gotta add the one minimum per selected set hard code
+    // lowercase character inclusion hardcode
+    if (lowercase_include) {
+      var lowercase_hardcode_index = Math.floor(Math.random() * lowercase_set.length);
+      password_to_be_returned += lowercase_set[lowercase_hardcode_index];
+    }
 
-    for(let i = 0; i < user_desired_length; i++) { // could make it i < user_desired_length - sum of bools of the four sets
+    // uppercase character inclusion hardcode
+    if (uppercase_include) {
+      var uppercase_hardcode_index = Math.floor(Math.random() * uppercase_set.length);
+      password_to_be_returned += uppercase_set[uppercase_hardcode_index];
+    }
 
+    // numeric character inclusion hardcode
+    if (numeric_include) {
+      var numeric_hardcode_index = Math.floor(Math.random() * numeric_set.length);
+      password_to_be_returned += numeric_set[numeric_hardcode_index];
+    }
+
+    // special character inclusion hardcode
+    if (special_include) {
+      var special_hardcode_index = Math.floor(Math.random() * special_set.length);
+      password_to_be_returned += special_set[special_hardcode_index];
+    }
+
+    for(let i = 0; i < user_desired_length - (+numeric_include + +uppercase_include + +lowercase_include + +special_include); i++) { // could make it i < user_desired_length - sum of bools of the four sets
       // gotta add the one minimum per selected set hard code
 
 
