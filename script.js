@@ -22,21 +22,33 @@ function writePassword() {
 
 
   var user_desired_length = window.prompt("How many characters would you like your password to contain? It needs to be at least 8 long and no more than 128 long.");
-
+  // user_desired_length= parseInt(user_desired_length)
+  
   if (user_desired_length >= 8 && user_desired_length <= 128){
-    // window.alert("Great"); // commented out. Don't need a return statement here. Just need to not return.
+  
+    // window.alert("Great"); // commented out. Don't need a return statement here. Just need to not returN
+      //if(!Number.isInteger(user_desired_length)) {
+    //  if (typeof user_desired_length !== "integer") {
+    //if(user_desired_length.isInteger()) {
+
+    // Check that number in range is not a decimal
+    if (user_desired_length % 1 !== 0) {
+        window.alert("That is not an integer. Try again.");
+        return; // exit out of prompt sequence   
     }
+  }
   else if (user_desired_length < 8){
     window.alert("Your password needs to be at least 8 characters long. Try again.");
     return; } // exit out of prompt sequence
   else if (user_desired_length > 128){
-    window.alert("Your password needs to be no more than 128 characters long. Try again");
+    window.alert("Your password needs to be no more than 128 characters long. Try again.");
     return; } // exit out of prompt sequence
-  else {
+  else { 
+
+    // 
     window.alert("Your input was not numeric. Try again.");
     return; // exit out of prompt sequence
   }
-
 
   // Get lowercase characters boolean
   var special_include = window.confirm("Click OK to confirm including special characters.");
