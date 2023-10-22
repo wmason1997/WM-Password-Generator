@@ -1,17 +1,18 @@
 // Assignment Code
 var generateBtn = document.querySelector("#generate");
+
+// Created global variables that do not need to be reset each time the button is pressed.
 var numeric_set = ["0", "1", "2", "3", "4", "5", "6", "7", "8", "9"];
 var lowercase_set = ["a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", "n", "o", "p", "q", "r", "s", "t", "u", "v", "w", "x", "y", "z"];
 var uppercase_set = ["A", "B", "C", "D", "E", "F", "G", "H", "I", "J", "K", "L", "M", "N", "O", "P", "Q", "R", "S", "T", "U", "V", "W", "X", "Y", "Z"];
 var special_set = [" ", "!", "\"", "#", "$", "%", "&", "'", "(", ")", "*", "+", ",", "-", ".", "/", ":", ";", "<", "=", ">", "?", "@", "[", "\\", "]", "^", "_", "`", "{", "|", "}", "~"]; // added escape characters, a \,  for " and \
 
 
-// give credit to https://stackoverflow.com/questions/7820683/convert-boolean-result-into-number-integer
-console.log(+ true);
-var bool_no = false;
-var bool_yes = true;
-console.log(+bool_no)
-console.log(+true + +bool_yes) // hooray this is what we needed
+// console.log(+ true);
+// var bool_no = false;
+// var bool_yes = true;
+// console.log(+bool_no)
+// console.log(+true + +bool_yes) // hooray this is what we needed
 
 
 // var usable_set_1 = [];
