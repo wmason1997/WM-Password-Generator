@@ -7,9 +7,9 @@ var lowercase_set = ["a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l",
 var uppercase_set = ["A", "B", "C", "D", "E", "F", "G", "H", "I", "J", "K", "L", "M", "N", "O", "P", "Q", "R", "S", "T", "U", "V", "W", "X", "Y", "Z"];
 var special_set = [" ", "!", "\"", "#", "$", "%", "&", "'", "(", ")", "*", "+", ",", "-", ".", "/", ":", ";", "<", "=", ">", "?", "@", "[", "\\", "]", "^", "_", "`", "{", "|", "}", "~"]; // added escape characters, a \,  for " and \
 
-function generatePassword() {
-  console.log('clicked');
-}
+// function generatePassword() { // Commented out because my code ultimately did not need this in order to work. 
+//   console.log('clicked');
+// }
 
 
 // Write password to the #password input
@@ -17,7 +17,7 @@ function writePassword() {
 // window.alert("You clicked me!"); // update later
 
   var password_to_be_returned = ''; // had to move inside function so that a new empty password string is initialized every time
-  var selected_subset = []; // predefining the set that will have 1-4 sets later
+  var selected_subset = []; // pre-defining the set that will have 1-4 sets later
   // similarly had to move inside function so that it would be reset to empty every time button is clicked
 
 
@@ -25,13 +25,7 @@ function writePassword() {
   // user_desired_length= parseInt(user_desired_length)
   
   if (user_desired_length >= 8 && user_desired_length <= 128){
-  
-    // window.alert("Great"); // commented out. Don't need a return statement here. Just need to not returN
-      //if(!Number.isInteger(user_desired_length)) {
-    //  if (typeof user_desired_length !== "integer") {
-    //if(user_desired_length.isInteger()) {
-
-    // Check that number in range is not a decimal
+      // Check that number in range is not a decimal
     if (user_desired_length % 1 !== 0) {
         window.alert("That is not an integer. Try again.");
         return; // exit out of prompt sequence   
@@ -44,8 +38,7 @@ function writePassword() {
     window.alert("Your password needs to be no more than 128 characters long. Try again.");
     return; } // exit out of prompt sequence
   else { 
-
-    // 
+    // If input was not numeric, throw error message
     window.alert("Your input was not numeric. Try again.");
     return; // exit out of prompt sequence
   }
@@ -67,7 +60,7 @@ function writePassword() {
     if (numeric_include) {selected_subset = selected_subset.concat(numeric_set);}
     if (uppercase_include) {selected_subset = selected_subset.concat(uppercase_set);}
     if (lowercase_include) {selected_subset = selected_subset.concat(lowercase_set);}
-    if (special_include) {selected_subset = selected_subset.concat(special_set);} // will add later on once you get special chars working
+    if (special_include) {selected_subset = selected_subset.concat(special_set);} 
 
     // gotta add the one minimum per selected set hard code
     // lowercase character inclusion hardcode
@@ -93,8 +86,7 @@ function writePassword() {
       var special_hardcode_index = Math.floor(Math.random() * special_set.length);
       password_to_be_returned += special_set[special_hardcode_index];
     }
-   
-   
+
     for(let i = 0; i < user_desired_length - (+numeric_include + +uppercase_include + +lowercase_include + +special_include); i++) { // could make it i < user_desired_length - sum of bools of the four sets
       // gotta add the one minimum per selected set hard code
 
@@ -110,7 +102,7 @@ function writePassword() {
     return; // breaks out of pw generator
   }
 
-  // var password = generatePassword();
+  // var password = generatePassword(); // commented out because did not need it in order to work when deployed
   var passwordText = document.querySelector("#password");
 
   // passwordText.value = password;
