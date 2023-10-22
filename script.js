@@ -1,4 +1,4 @@
-// Assignment Code
+Assignment Code
 var generateBtn = document.querySelector("#generate");
 
 // Created global variables that do not need to be reset each time the button is pressed.
