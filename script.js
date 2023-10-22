@@ -1,4 +1,4 @@
-Assignment Code
+//  Assignment Code
 var generateBtn = document.querySelector("#generate");
 
 // Created global variables that do not need to be reset each time the button is pressed.
@@ -102,38 +102,14 @@ window.alert("You clicked me!"); // update later
       password_to_be_returned += selected_subset[added_char_index];
     }
 
-    window.alert(
-      "The generated password is: " + password_to_be_returned
-    )
+    window.alert("The generated password is: " + password_to_be_returned)
     
-    // Need to add to box itself
-    // Need to use id generate and change text to password_to_be_returned
-    // var change_generate = document.querySelector("#generate");
-    // change_generate.setAttribute(password_to_be_returned);
-
-    // placeholder 
-
-    // var change_generate = document.querySelector("#password");
-    // change_generate.setAttribute(password_to_be_returned);
-
-    // var change_generate = document.getElementById("generate");
-    // change_generate.textContent = password_to_be_returned;
-
-    // I WANT TO ADD THE PASSWORD TO THE SCREEN TOO
-
-//     // Get the textarea element by its id
-// var textareaElement = document.getElementById("password");
-// textareaElement.setAttribute("placeholder", password_to_be_returned);
-
-// // Get the placeholder text
-// var placeholderText = textareaElement.getAttribute("placeholder");
-// placeholderText = password_to_be_returned;
-
-// console.log(placeholderText); // This will log "Your Secure Password"
+   
 
 
 
-    ; 
+
+    
 
   } else {
     window.alert("None were selected :((( Try again ");
@@ -144,7 +120,8 @@ window.alert("You clicked me!"); // update later
   var password = generatePassword();
   var passwordText = document.querySelector("#password");
 
-  passwordText.value = password;
+  // passwordText.value = password;
+  passwordText.value = password_to_be_returned; // updated the updated password to be the one my function created
 
 
 }
