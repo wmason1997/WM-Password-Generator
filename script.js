@@ -103,7 +103,36 @@ window.alert("You clicked me!"); // update later
 
     window.alert(
       "The generated password is: " + password_to_be_returned
-    ); 
+    )
+    
+    // Need to add to box itself
+    // Need to use id generate and change text to password_to_be_returned
+    // var change_generate = document.querySelector("#generate");
+    // change_generate.setAttribute(password_to_be_returned);
+
+    // placeholder 
+
+    // var change_generate = document.querySelector("#password");
+    // change_generate.setAttribute(password_to_be_returned);
+
+    // var change_generate = document.getElementById("generate");
+    // change_generate.textContent = password_to_be_returned;
+
+    // I WANT TO ADD THE PASSWORD TO THE SCREEN TOO
+
+//     // Get the textarea element by its id
+// var textareaElement = document.getElementById("password");
+// textareaElement.setAttribute("placeholder", password_to_be_returned);
+
+// // Get the placeholder text
+// var placeholderText = textareaElement.getAttribute("placeholder");
+// placeholderText = password_to_be_returned;
+
+// console.log(placeholderText); // This will log "Your Secure Password"
+
+
+
+    ; 
 
   } else {
     window.alert("None were selected :((( Try again ");
@@ -116,12 +145,7 @@ window.alert("You clicked me!"); // update later
 
   passwordText.value = password;
 
-  // var user_desired_length = window.prompt("How long do you want your password to be? It needs to be at least 8 long and no more than 128 long.");
-  // if (user_desired_length >= 8 && user_desired_length <= 128){
-  //   window.alert("Great") }
-  // else {
-  //   window.alert("Not quite!")
-  // }
+
 }
 
 // Add event listener to generate button
