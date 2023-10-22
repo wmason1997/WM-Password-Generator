@@ -4,7 +4,7 @@
 
 The starter code to be refactored was from the Develop folder within the 02-Challenge folder within the 03-JavaScript folder within the UCSD-VIRT-FSF-PT-09-2023-U-LOLC GitLab repository. On GitLab, it says that user mvpache authored the repository.
 
-I have refactored the script.js file to give the deployed website the same functionality and similar prompts as the example from lecture given by Michael. I also had my password generator return the prompted password in both the window alert boxes and the placeholder location on the webpage.
+I have refactored the script.js file to give the deployed website the same functionality and similar prompts as the example from lecture given by Michael. I also made the decision to have my password generator return the prompted password in both the window alert boxes and the placeholder location on the webpage.
 
 ## Credits ##
 
