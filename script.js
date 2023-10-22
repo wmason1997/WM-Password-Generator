@@ -7,16 +7,6 @@ var lowercase_set = ["a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l",
 var uppercase_set = ["A", "B", "C", "D", "E", "F", "G", "H", "I", "J", "K", "L", "M", "N", "O", "P", "Q", "R", "S", "T", "U", "V", "W", "X", "Y", "Z"];
 var special_set = [" ", "!", "\"", "#", "$", "%", "&", "'", "(", ")", "*", "+", ",", "-", ".", "/", ":", ";", "<", "=", ">", "?", "@", "[", "\\", "]", "^", "_", "`", "{", "|", "}", "~"]; // added escape characters, a \,  for " and \
 
-
-// console.log(+ true);
-// var bool_no = false;
-// var bool_yes = true;
-// console.log(+bool_no)
-// console.log(+true + +bool_yes) // hooray this is what we needed
-
-
-// var usable_set_1 = [];
-
 function generatePassword() {
   console.log('clicked');
 }
@@ -103,13 +93,6 @@ window.alert("You clicked me!"); // update later
     }
 
     window.alert("The generated password is: " + password_to_be_returned)
-    
-   
-
-
-
-
-    
 
   } else {
     window.alert("None were selected :((( Try again ");
