@@ -16,7 +16,11 @@ I asked ChatGPT to help me figure out the required escape characters for the spe
 
 ## Screenshots ##
 
-
+![Screenshot](assets/images/WM-Password-Generator-Landing-Photo.png)
+![Screenshot](assets/images/WM-Password-Generator-Char-Length-Input.png)
+![Screenshot](assets/images/WM-Password-Generator-Char-Set-Selection.png)
+![Screenshot](assets/images/WM-Password-Generator-Window-Returned-Password.png)
+![Screenshot](assets/images/WM-Password-Generator-Screen-Returned-Password.png)
 
 ## Link to Deployed Application ##
 [William Mason Password Generator](https://wmason1997.github.io/WM-Password-Generator/)
