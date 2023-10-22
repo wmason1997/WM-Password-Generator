@@ -12,6 +12,8 @@ I used this link - https://stackoverflow.com/questions/7820683/convert-boolean-r
 
 I met with tutor Sangeetha Kaliaperumal on October 22, 2023 to hammer out the final details of my project.
 
+I asked ChatGPT to help me figure out the required escape characters for the special characters that were giving my VS code a hard time. The double quote " and the backslash \ each needed a backslash \ to precede them. I got the [list of password special characters](https://www.owasp.org/index.php/Password_special_characters) from the OWASP Foundation from the README in the source code.
+
 ## Screenshots ##
 
 
