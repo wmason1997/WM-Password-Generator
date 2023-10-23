@@ -62,7 +62,7 @@ function writePassword() {
     if (lowercase_include) {selected_subset = selected_subset.concat(lowercase_set);}
     if (special_include) {selected_subset = selected_subset.concat(special_set);} 
 
-    // gotta add the one minimum per selected set hard code
+    // Added the one minimum character per selected set hard code here
     // lowercase character inclusion hardcode
     if (lowercase_include) {
       var lowercase_hardcode_index = Math.floor(Math.random() * lowercase_set.length);
@@ -87,10 +87,11 @@ function writePassword() {
       password_to_be_returned += special_set[special_hardcode_index];
     }
 
+    // for loop that is the length of the user's desired input, minus the amount of hardcoded selected set characters
     for(let i = 0; i < user_desired_length - (+numeric_include + +uppercase_include + +lowercase_include + +special_include); i++) { // could make it i < user_desired_length - sum of bools of the four sets
       // gotta add the one minimum per selected set hard code
 
-
+      // gets a randomized index from the possible characters list ie the selected_subset and appends to the growing password_to_be_returned variable
       var added_char_index = Math.floor(Math.random() * selected_subset.length);
       password_to_be_returned += selected_subset[added_char_index];
     }
